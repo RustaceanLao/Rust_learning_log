@@ -1,1 +1,19 @@
+Rustlings: from 0/84 => x/84
 
+Something new for me:
+I do know that Rust cannot have two mutable reference at the same time,
+but this works:
+
+fn main() {
+    let mut x = 100;
+
+    let y = &mut x;
+    *y += 100;                 // the lifetime of y ends here
+
+    let z = &mut x;            // that's why we could have another &mut here!
+    *z += 1000;
+    assert_eq!(x, 1200);
+}
+
+the reason is that the lifetime of y ends on line 11, which allows a new mutable reference z to be created;
+if I try to use y after line 13, it won't compile because there would be two mutable references at the same time, which is not allowed.
