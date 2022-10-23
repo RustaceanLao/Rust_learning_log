@@ -1,4 +1,4 @@
-Rustlings: from 0/84 => x/84
+Rustlings: from 0/84 => 31/84
 
 Something new for me:
 I do know that Rust cannot have two mutable reference at the same time,
