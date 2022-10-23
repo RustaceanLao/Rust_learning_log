@@ -1,4 +1,4 @@
-## RustOS_learning_log
+## Rust_learning_log
 
 Brief Introduction:
 
